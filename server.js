@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { logger } from "logger-express";
-import swagger from"./config/swagger/swagger.js";
+import swagger from"./config/docs/swagger.js";
 
 import travelsRouter from "./config/routes/travelRoutes.js";
 import loginRoutes from "./config/routes/loginRoutes.js";
@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 
 swagger(app)
 app.use(express.json());
-app.options('*', cors())
+app.options('*', cors()) //ojo q esto no aparece en la clase
 app.use(logger());
 app.use("/api/v1", userRoutes);
 app.use("/api/v1", travelsRouter);

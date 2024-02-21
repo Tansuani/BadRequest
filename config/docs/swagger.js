@@ -5,9 +5,9 @@ const options = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "Plan de viajes API",
+      title: "Plan de viajes API", //cambiar nombre
       version: "1.0.0",
-      description: "API para el manejo de viajes y usuarios",
+      description: "API para el manejo de viajes y usuarios", //cambiar descripción
     },
     servers: [
       {
@@ -15,7 +15,7 @@ const options = {
       },
     ],
   },
-  apis: ["config/routes/*.js"],
+  apis: ["config/routes/*.js"], //actualmente con * lee todas las rutas, se pueden separar especificando cada ruta.
 };
 
 const specs = swaggerJsdoc(options);
@@ -27,13 +27,8 @@ export default (app) => {
     swaggerUi.setup(specs, {
       explorer: true,
       customCssUrl:
-        "https://cdn.jsdelivr.net/npm/swagger-ui-themes@3.0.0/themes/3.x/theme-material.css",
+        "https://cdn.jsdelivr.net/npm/swagger-ui-themes@3.0.0/themes/3.x/theme-monokai.css",
     })
   );
 };
 
-// theme-flattop.css;
-// theme-monokai.css
-// theme-material.css
-// theme-muted.css
-// theme-outline.css
