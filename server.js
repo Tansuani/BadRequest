@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { logger } from "logger-express";
-import swagger from"./config/docs/swagger.js";
+import swagger from"./config/swagger/swagger.js";
 
 import travelsRouter from "./config/routes/travelRoutes.js";
 import loginRoutes from "./config/routes/loginRoutes.js";
