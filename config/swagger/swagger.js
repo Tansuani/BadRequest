@@ -15,7 +15,7 @@ const options = {
       },
     ],
   },
-  apis: ["config/routes/*.js"], //actualmente con * lee todas las rutas, se pueden separar especificando cada ruta.
+  apis: ["config/routes/docs/loginSwagger.js", "config/routes/docs/travelSwagger.js", "config/routes/docs/userSwagger.js"],
 };
 
 const specs = swaggerJsdoc(options);
